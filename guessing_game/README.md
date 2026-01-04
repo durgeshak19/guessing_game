@@ -1,58 +1,78 @@
 # Guessing Game
 
-Welcome to the Guessing Game! This is a simple Rust application where the player has to guess a randomly generated number between 1 and 10.
+Welcome to the Guessing Game! This is a small Rust command-line application where the player must guess a randomly generated number between 1 and 10.
 
 ## Overview
 
-The Guessing Game is designed to be a fun and interactive way to practice your Rust programming skills. The game will prompt you to guess a number, and it will provide feedback on whether your guess is too high, too low, or correct. You have a limited number of attempts to guess the correct number, and you can choose to play again after each round.
+The Guessing Game is intended to be a fun, interactive example for learning Rust. The game prompts you to guess a number, gives feedback when a guess is wrong, and informs you when you've guessed correctly. You have a limited number of attempts per round and can choose to play again after each round.
 
 ## Features
 
-- Random number generation between 1 and 10.
-- User input handling for guesses.
-- Feedback on guesses (too high, too low, or correct).
-- Limited number of attempts (5 attempts).
-- Option to play again after finishing a game.
+- Random number generation between 1 and 10 (uses `rand`).
+- User input handling for guesses and simple commands.
+- Limited number of attempts per round (default: 5).
+- Option to exit mid-game with `exit()` and to play again after each round.
 
 ## Getting Started
 
-To run the Guessing Game, follow these steps:
+To run the Guessing Game locally:
 
-1. Ensure you have Rust installed on your machine. You can download it from [rust-lang.org](https://www.rust-lang.org/).
-2. Clone the repository to your local machine:
+1. Install Rust and Cargo (if not already installed):
 
-   ```
-   git clone <repository-url>
-   ```
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
-3. Navigate to the project directory:
+2. Clone the repository:
 
-   ```
-   cd guessing_game
-   ```
+```bash
+git clone https://github.com/durgeshak19/guessing_game.git
+```
 
-4. Run the game using Cargo:
+3. Change into the crate directory and run:
 
-   ```
-   cargo run
-   ```
+```bash
+cd guessing_game/guessing_game
+cargo run
+```
+
+Or, from the project root (if you prefer):
+
+```bash
+cd /path/to/guessing_game
+cargo run -p guessing_game
+```
+
+The first time you build it, Cargo will compile dependencies and the program; subsequent runs will be faster.
 
 ## How to Play
 
-1. When prompted, enter your guess (a number between 1 and 10).
-2. If you want to exit the game at any time, type `exit()`.
-3. After each guess, you will receive feedback on whether your guess was correct or not.
-4. If you use all your attempts without guessing correctly, the game will reveal the correct number.
-5. At the end of the game, you will have the option to play again.
+1. When the program prompts, type a number between 1 and 10 and press Enter.
+2. Type `exit()` at any time to quit the current round; the program will show the correct number.
+3. After a round ends (win or lose), you'll be asked whether you want to play again (yes/no).
+
+## Example session
+
+```
+Attempt number: 1/5 ! Guess the number or type exit() to exit
+5
+Wrong guess, try again!
+Attempt number: 2/5 ! Guess the number or type exit() to exit
+3
+Congratulations! You guessed the correct number in 2 attempts.
+Do you want to play again? (yes/no):
+no
+Thank you for playing! Goodbye!
+```
 
 ## Contributing
 
-If you would like to contribute to the Guessing Game, feel free to submit a pull request or open an issue for any suggestions or improvements.
+Contributions are welcome. If you'd like to improve the game (better input parsing, tests, additional features), please open an issue or submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is released under the MIT License. If you distribute or publish this repository, consider adding a `LICENSE` file containing the full MIT license text.
 
 ## Acknowledgments
 
-Thank you for playing the Guessing Game! Enjoy and have fun!
+Thanks for trying the Guessing Game — have fun and happy coding!
