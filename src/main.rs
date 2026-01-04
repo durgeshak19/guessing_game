@@ -53,9 +53,7 @@ fn main() {
             .read_line(&mut play_again)
             .expect("Failed to read line");
 
-        if play_again.trim().to_lowercase() == "no"
-            || play_again.trim().to_lowercase() == "n"
-        {
+        if play_again.trim().to_lowercase() == "no" || play_again.trim().to_lowercase() == "n" {
             break;
         } else if play_again.trim().to_lowercase() == "yes"
             || play_again.trim().to_lowercase() == "y"
