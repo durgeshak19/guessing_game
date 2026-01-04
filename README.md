@@ -20,22 +20,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 How to run
 
-Option A — run from the project root (workspace)
-
-If the repository is a workspace or has multiple crates, specify the package name (if needed):
+Run from the project root
 
 ```bash
-cd /Users/durgeshkumar/Documents/guessing_game
-# If the root Cargo.toml is configured to run the guessing_game crate, use:
-cargo run
-# Or explicitly run the crate (replace `guessing_game` with the package name if different):
-cargo run -p guessing_game
-```
-
-Option B — run inside the crate directory
-
-```bash
-cd /Users/durgeshkumar/Documents/guessing_game/guessing_game
 cargo run
 ```
 
