@@ -4,7 +4,7 @@ fn main() {
     println!("Guess a number from 1 to 10.");
     let mut name = String::new();
 
-    let _guess: u32 = rand::thread_rng().gen_range(1..10);
+    let _guess: u32 = rand::rng().random_range(1..10);
 
     let mut count: u32 = 1;
     let max_attempts: u32 = 5;
@@ -51,7 +51,7 @@ fn main() {
         else if play_again.trim().to_lowercase().to_string() == "yes" || play_again.trim().to_lowercase().to_string() == "y" {
             name.clear();
             count = 1;
-            let _guess: u32 = rand::thread_rng().gen_range(1..10);
+            let _guess: u32 = rand::rng().random_range(1..10);
             continue;
         }
         else {
