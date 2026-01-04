@@ -53,12 +53,12 @@ fn main() {
             .read_line(&mut play_again)
             .expect("Failed to read line");
 
-        if play_again.trim().to_lowercase().to_string() == "no"
-            || play_again.trim().to_lowercase().to_string() == "n"
+        if play_again.trim().to_lowercase() == "no"
+            || play_again.trim().to_lowercase() == "n"
         {
             break;
-        } else if play_again.trim().to_lowercase().to_string() == "yes"
-            || play_again.trim().to_lowercase().to_string() == "y"
+        } else if play_again.trim().to_lowercase() == "yes"
+            || play_again.trim().to_lowercase() == "y"
         {
             name.clear();
             count = 1;
