@@ -1,8 +1,10 @@
 name: CI
 
-# Disabled automatic runs: this workflow will only run manually from the Actions tab.
 on:
-  workflow_dispatch: {}
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
@@ -26,7 +28,7 @@ jobs:
             ${{ runner.os }}-cargo-
 
       - name: Setup Rust
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/gh-actions-rust-toolchain@stable
         with:
           toolchain: ${{ matrix.rust }}
 
