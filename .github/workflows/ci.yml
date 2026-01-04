@@ -1,10 +1,8 @@
 name: CI
 
+# Disabled automatic runs: this workflow will only run manually from the Actions tab.
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch: {}
 
 jobs:
   build:
