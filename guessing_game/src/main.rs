@@ -59,5 +59,5 @@ fn main() {
             break;
         }
     }
-    println!("Thank you for playing! Goodbye!");
+    println!("Thank you for playing! Goodbye!!");
 }
